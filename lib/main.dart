@@ -8,13 +8,13 @@ import 'package:localagriculture/sellersList.dart';
 import 'package:localagriculture/vegetablesList.dart';
 
 void main() {
-  MaterialApp(
+  runApp(MaterialApp(
     initialRoute: '/',
     routes: {
       '/': (context) => MyApp(),
       '/second': (context) => ProductView(),
     },
-  );
+  ));
 }
 
 class MyApp extends StatefulWidget {
@@ -34,109 +34,118 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home:
-         Builder(
-          builder: (context) => Center(
-            child: Scaffold(
-              body: ListView(
-                children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.all(10.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: <Widget>[
-                        Container(
-                          child: Row(
-                            children: <Widget>[
-                              SizedBox(
-                                height: 100.0,
+    return
+      Builder(
+        builder: (context) => Center(
+          child: Scaffold(
+            body: ListView(
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                      Container(
+                        child: Row(
+                          children: <Widget>[
+                            SizedBox(
+                              height: 100.0,
+                            ),
+                            IconButton(
+                              icon: Icon(
+                                Icons.location_on,
+                                color: Colors.green,
                               ),
-                              IconButton(
-                                icon: Icon(
-                                  Icons.location_on,
-                                  color: Colors.green,
-                                ),
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => PlacePicker(
-                                        apiKey:
-                                        "AIzaSyBnn_ArFhseTvMZLTDG8PQo5uUtUN78eh8",
-                                        // Put YOUR OWN KEY here.
-                                        onPlacePicked: (result) {
-                                          Navigator.of(context).pop();
-                                        },
-                                        initialPosition: _MyAppState.kInitialPosition,
-                                        useCurrentLocation: true,
-                                      ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => PlacePicker(
+                                      apiKey:
+                                          "AIzaSyBnn_ArFhseTvMZLTDG8PQo5uUtUN78eh8",
+                                      // Put YOUR OWN KEY here.
+                                      onPlacePicked: (result) {
+                                        Navigator.of(context).pop();
+                                      },
+                                      initialPosition:
+                                          _MyAppState.kInitialPosition,
+                                      useCurrentLocation: true,
                                     ),
-                                  );
-                                },
-                              ),
-                              Text('Sahayoginagar, Kathmandu'),
-                            ],
-                          ),
+                                  ),
+                                );
+                              },
+                            ),
+                            Text('Sahayoginagar, Kathmandu'),
+                          ],
                         ),
-                        // add searchBar
-                        TextFormField(
-                          decoration: InputDecoration(
-                            labelText: 'Search',
-                            border: new OutlineInputBorder(
-                              borderRadius: new BorderRadius.circular(25.0),
-                              borderSide: new BorderSide(
-                                color: Colors.pink,
-                              ),
+                      ),
+                      // add searchBar
+                      TextFormField(
+                        decoration: InputDecoration(
+                          labelText: 'Search',
+                          border: new OutlineInputBorder(
+                            borderRadius: new BorderRadius.circular(25.0),
+                            borderSide: new BorderSide(
+                              color: Colors.pink,
                             ),
                           ),
                         ),
-                        SizedBox(
-                          height: 30.0,
-                        ),
-                        Text('Available Today',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20.0),),
-                        SizedBox(height: 20.0,),
-                        VegetablesList(),
-                        SizedBox(
-                          height: 40.0,
-                        ),
-                        Text('Our Sellers',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20.0),),
-                        SizedBox(
-                          height: 30.0,
-                        ),
-                        SellersList(),
-                      ],
-                    ),
+                      ),
+                      SizedBox(
+                        height: 30.0,
+                      ),
+                      Text(
+                        'Available Today',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20.0),
+                      ),
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      VegetablesList(),
+                      SizedBox(
+                        height: 40.0,
+                      ),
+                      Text(
+                        'Our Sellers',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20.0),
+                      ),
+                      SizedBox(
+                        height: 30.0,
+                      ),
+                      SellersList(),
+                    ],
                   ),
-                ],
-              ),
-              bottomNavigationBar: BottomNavigationBar(
-                type: BottomNavigationBarType.fixed,
-                items: const <BottomNavigationBarItem>[
-                  BottomNavigationBarItem(
-                    icon: Icon(
-                      Icons.home,
-                    ),
-                    title: Text('Home'),
+                ),
+              ],
+            ),
+            bottomNavigationBar: BottomNavigationBar(
+              type: BottomNavigationBarType.fixed,
+              items: const <BottomNavigationBarItem>[
+                BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.home,
                   ),
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.shopping_basket),
-                    title: Text('Sell'),
-                  ),
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.person),
-                    title: Text('Profile'),
-                  ),
-                ],
-                currentIndex: _selectedIndex,
-                selectedItemColor: Colors.green,
-                onTap: _onItemTapped,
-              ),
+                  title: Text('Home'),
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.shopping_basket),
+                  title: Text('Sell'),
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.person),
+                  title: Text('Profile'),
+                ),
+              ],
+              currentIndex: _selectedIndex,
+              selectedItemColor: Colors.green,
+              onTap: _onItemTapped,
             ),
           ),
         ),
+      );
 
-    );
   }
 }

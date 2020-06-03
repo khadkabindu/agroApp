@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:localagriculture/productView.dart';
 
 class VegetablesList extends StatefulWidget {
   @override
@@ -20,7 +21,6 @@ class _VegetableList extends State<VegetablesList> {
             children: <Widget>[
               InkWell(
                 onTap: (){
-                  print('hello');
                   Navigator.pushNamed(context, '/second');
                 },
                 child: Container(
