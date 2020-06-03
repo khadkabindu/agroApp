@@ -23,6 +23,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flappy_search_bar: 1.4.1
+  google_maps_place_picker: 0.9.4
+  google_maps_flutter: 0.5.28+1
 
 
   # The following adds the Cupertino Icons font to your application.
