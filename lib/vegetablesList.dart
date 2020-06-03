@@ -26,6 +26,62 @@ class _VegetableList extends State<VegetablesList> {
                         height: 20.0,
                       ),
                       Image.asset(
+                        'images/carrot.png',
+                        height: 80.0,
+                      ),
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      Text(
+                        'Carrot',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Text('15 farmers'),
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                height: 190.0,
+                width: 130.0,
+                child: Card(
+                  child: Column(
+                    children: <Widget>[
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      Image.asset(
+                        'images/broccoli.png',
+                        height: 80.0,
+                      ),
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      Text(
+                        'Broccoli',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Text('8 farmers'),
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                height: 190.0,
+                width: 130.0,
+                child: Card(
+                  child: Column(
+                    children: <Widget>[
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      Image.asset(
                         'images/brinjals.png',
                         height: 80.0,
                       ),
@@ -33,13 +89,13 @@ class _VegetableList extends State<VegetablesList> {
                         height: 20.0,
                       ),
                       Text(
-                        'Cauliflower',
+                        'Brinjal',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         height: 10.0,
                       ),
-                      Text('10 farmers'),
+                      Text('6 farmers'),
                     ],
                   ),
                 ),
@@ -61,45 +117,18 @@ class _VegetableList extends State<VegetablesList> {
                         height: 20.0,
                       ),
                       Text(
-                        'Cauliflower',
+                        'Bitter Gourd',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         height: 10.0,
                       ),
-                      Text('10 farmers'),
+                      Text('15 farmers'),
                     ],
                   ),
                 ),
               ),
-              Container(
-                height: 190.0,
-                width: 130.0,
-                child: Card(
-                  child: Column(
-                    children: <Widget>[
-                      SizedBox(
-                        height: 20.0,
-                      ),
-                      Image.asset(
-                        'images/carrot.png',
-                        height: 80.0,
-                      ),
-                      SizedBox(
-                        height: 20.0,
-                      ),
-                      Text(
-                        'Cauliflower',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                      Text('10 farmers'),
-                    ],
-                  ),
-                ),
-              ),
+
               Container(
                 height: 190.0,
                 width: 130.0,
@@ -123,7 +152,7 @@ class _VegetableList extends State<VegetablesList> {
                       SizedBox(
                         height: 10.0,
                       ),
-                      Text('10 farmers'),
+                      Text('4 farmers'),
                     ],
                   ),
                 ),
@@ -145,41 +174,13 @@ class _VegetableList extends State<VegetablesList> {
                         height: 20.0,
                       ),
                       Text(
-                        'Cauliflower',
+                        'Cucumber',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         height: 10.0,
                       ),
-                      Text('10 farmers'),
-                    ],
-                  ),
-                ),
-              ),
-              Container(
-                height: 190.0,
-                width: 130.0,
-                child: Card(
-                  child: Column(
-                    children: <Widget>[
-                      SizedBox(
-                        height: 20.0,
-                      ),
-                      Image.asset(
-                        'images/broccoli.png',
-                        height: 80.0,
-                      ),
-                      SizedBox(
-                        height: 20.0,
-                      ),
-                      Text(
-                        'Cauliflower',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                      Text('10 farmers'),
+                      Text('16 farmers'),
                     ],
                   ),
                 ),
