@@ -17,7 +17,6 @@ class _SellersList extends State<SellersList> {
           Row(
             children: <Widget>[
               Container(
-
                 height: 270,
                 width: 200.0,
                 child: Stack(
@@ -37,7 +36,7 @@ class _SellersList extends State<SellersList> {
                         ),
                         Row(
                           children: <Widget>[
-                            Text('Ships 20 Tons',style: TextStyle(color: Colors.white,fontSize: 15.0),),
+                            Text('Ships 10 Tons',style: TextStyle(color: Colors.white,fontSize: 15.0),),
                             SizedBox(width: 20.0,),
                             Icon(Icons.star,color: Colors.green,size: 18.0,),
                             Text('5.0',style: TextStyle(color: Colors.white),),
@@ -49,7 +48,6 @@ class _SellersList extends State<SellersList> {
                 ),
               ),
               Container(
-
                 height: 270,
                 width: 200.0,
                 child: Stack(
@@ -63,7 +61,7 @@ class _SellersList extends State<SellersList> {
                       top: 220.0,
                       child: Column(children: <Widget>[
                         Text(
-                          'Reema Basnet',
+                          'Anil Shrestha',
                           style: TextStyle(
                               fontWeight: FontWeight.bold, color: Colors.white,fontSize: 20.0),
                         ),
@@ -81,71 +79,6 @@ class _SellersList extends State<SellersList> {
                 ),
               ),
               Container(
-
-                height: 270,
-                width: 200.0,
-                child: Stack(
-                  children: <Widget>[
-                    Image.asset(
-                      'images/woman farmer 2.jpg',
-                      fit: BoxFit.cover,
-                    ),
-                    Positioned(
-                      left: 5.0,
-                      top: 220.0,
-                      child: Column(children: <Widget>[
-                        Text(
-                          'Reema Basnet',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, color: Colors.white,fontSize: 20.0),
-                        ),
-                        Row(
-                          children: <Widget>[
-                            Text('Ships 20 Tons',style: TextStyle(color: Colors.white,fontSize: 15.0),),
-                            SizedBox(width: 20.0,),
-                            Icon(Icons.star,color: Colors.green,size: 18.0,),
-                            Text('5.0',style: TextStyle(color: Colors.white),),
-                          ],
-                        ),
-                      ],),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-
-                height: 270,
-                width: 200.0,
-                child: Stack(
-                  children: <Widget>[
-                    Image.asset(
-                      'images/woman with hat.jpg',
-                      fit: BoxFit.cover,
-                    ),
-                    Positioned(
-                      left: 5.0,
-                      top: 220.0,
-                      child: Column(children: <Widget>[
-                        Text(
-                          'Reema Basnet',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, color: Colors.white,fontSize: 20.0),
-                        ),
-                        Row(
-                          children: <Widget>[
-                            Text('Ships 20 Tons',style: TextStyle(color: Colors.white,fontSize: 15.0),),
-                            SizedBox(width: 20.0,),
-                            Icon(Icons.star,color: Colors.green,size: 18.0,),
-                            Text('5.0',style: TextStyle(color: Colors.white),),
-                          ],
-                        ),
-                      ],),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-
                 height: 270,
                 width: 200.0,
                 child: Stack(
@@ -155,20 +88,52 @@ class _SellersList extends State<SellersList> {
                       fit: BoxFit.cover,
                     ),
                     Positioned(
-                      left: 5.0,
+                      left: 4.0,
                       top: 220.0,
                       child: Column(children: <Widget>[
                         Text(
-                          'Reema Basnet',
+                          'Kopila Bhatta',
                           style: TextStyle(
                               fontWeight: FontWeight.bold, color: Colors.white,fontSize: 20.0),
                         ),
                         Row(
                           children: <Widget>[
-                            Text('Ships 20 Tons',style: TextStyle(color: Colors.white,fontSize: 15.0),),
+                            Text('Ships 5 Tons',style: TextStyle(color: Colors.white,fontSize: 15.0),),
                             SizedBox(width: 20.0,),
                             Icon(Icons.star,color: Colors.green,size: 18.0,),
-                            Text('5.0',style: TextStyle(color: Colors.white),),
+                            Text('4.0',style: TextStyle(color: Colors.white),),
+                          ],
+                        ),
+                      ],),
+                    ),
+                  ],
+                ),
+              ),
+
+              Container(
+                height: 270,
+                width: 200.0,
+                child: Stack(
+                  children: <Widget>[
+                    Image.asset(
+                      'images/farmer 1.jpg',
+                      fit: BoxFit.cover,
+                    ),
+                    Positioned(
+                      left: 5.0,
+                      top: 220.0,
+                      child: Column(children: <Widget>[
+                        Text(
+                          'Hari Khadka',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, color: Colors.white,fontSize: 20.0),
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Text('Ships 3 Tons',style: TextStyle(color: Colors.white,fontSize: 15.0),),
+                            SizedBox(width: 20.0,),
+                            Icon(Icons.star,color: Colors.green,size: 18.0,),
+                            Text('3.0',style: TextStyle(color: Colors.white),),
                           ],
                         ),
                       ],),

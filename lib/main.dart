@@ -2,12 +2,19 @@ import 'package:flappy_search_bar/flappy_search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_place_picker/google_maps_place_picker.dart';
+import 'package:localagriculture/productView.dart';
 import 'package:localagriculture/searchBar.dart';
 import 'package:localagriculture/sellersList.dart';
 import 'package:localagriculture/vegetablesList.dart';
 
 void main() {
-  runApp(MyApp());
+  MaterialApp(
+    initialRoute: '/',
+    routes: {
+      '/': (context) => MyApp(),
+      '/second': (context) => ProductView(),
+    },
+  );
 }
 
 class MyApp extends StatefulWidget {
@@ -32,73 +39,77 @@ class _MyAppState extends State<MyApp> {
          Builder(
           builder: (context) => Center(
             child: Scaffold(
-              body: Padding(
-                padding: EdgeInsets.all(10.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Container(
-                      child: Row(
-                        children: <Widget>[
-                          SizedBox(
-                            height: 100.0,
-                          ),
-                          IconButton(
-                            icon: Icon(
-                              Icons.location_on,
-                              color: Colors.green,
-                            ),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => PlacePicker(
-                                    apiKey:
-                                        "AIzaSyBnn_ArFhseTvMZLTDG8PQo5uUtUN78eh8",
-                                    // Put YOUR OWN KEY here.
-                                    onPlacePicked: (result) {
-                                      Navigator.of(context).pop();
-                                    },
-                                    initialPosition: _MyAppState.kInitialPosition,
-                                    useCurrentLocation: true,
-                                  ),
+              body: ListView(
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          child: Row(
+                            children: <Widget>[
+                              SizedBox(
+                                height: 100.0,
+                              ),
+                              IconButton(
+                                icon: Icon(
+                                  Icons.location_on,
+                                  color: Colors.green,
                                 ),
-                              );
-                            },
-                          ),
-                          Text('New York street'),
-                        ],
-                      ),
-                    ),
-                    // add searchBar
-                    TextFormField(
-                      decoration: InputDecoration(
-                        labelText: 'Search',
-                        border: new OutlineInputBorder(
-                          borderRadius: new BorderRadius.circular(25.0),
-                          borderSide: new BorderSide(
-                            color: Colors.pink,
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => PlacePicker(
+                                        apiKey:
+                                        "AIzaSyBnn_ArFhseTvMZLTDG8PQo5uUtUN78eh8",
+                                        // Put YOUR OWN KEY here.
+                                        onPlacePicked: (result) {
+                                          Navigator.of(context).pop();
+                                        },
+                                        initialPosition: _MyAppState.kInitialPosition,
+                                        useCurrentLocation: true,
+                                      ),
+                                    ),
+                                  );
+                                },
+                              ),
+                              Text('Sahayoginagar, Kathmandu'),
+                            ],
                           ),
                         ),
-                      ),
+                        // add searchBar
+                        TextFormField(
+                          decoration: InputDecoration(
+                            labelText: 'Search',
+                            border: new OutlineInputBorder(
+                              borderRadius: new BorderRadius.circular(25.0),
+                              borderSide: new BorderSide(
+                                color: Colors.pink,
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30.0,
+                        ),
+                        Text('Available Today',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20.0),),
+                        SizedBox(height: 20.0,),
+                        VegetablesList(),
+                        SizedBox(
+                          height: 40.0,
+                        ),
+                        Text('Our Sellers',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20.0),),
+                        SizedBox(
+                          height: 30.0,
+                        ),
+                        SellersList(),
+                      ],
                     ),
-                    SizedBox(
-                      height: 30.0,
-                    ),
-                    Text('Available Today',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20.0),),
-                    SizedBox(height: 20.0,),
-                   VegetablesList(),
-                    SizedBox(
-                      height: 40.0,
-                    ),
-                    Text('Our Sellers',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20.0),),
-                    SizedBox(
-                      height: 30.0,
-                    ),
-                    SellersList(),
-                  ],
-                ),
+                  ),
+                ],
               ),
               bottomNavigationBar: BottomNavigationBar(
                 type: BottomNavigationBarType.fixed,

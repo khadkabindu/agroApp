@@ -15,32 +15,41 @@ class _VegetableList extends State<VegetablesList> {
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              Container(
-                height: 190.0,
-                width: 130.0,
-                child: Card(
-                  child: Column(
-                    children: <Widget>[
-                      SizedBox(
-                        height: 20.0,
-                      ),
-                      Image.asset(
-                        'images/carrot.png',
-                        height: 80.0,
-                      ),
-                      SizedBox(
-                        height: 20.0,
-                      ),
-                      Text(
-                        'Carrot',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                      Text('15 farmers'),
-                    ],
+              InkWell(
+                onTap: (){
+                  print('hello');
+                  Navigator.pushNamed(context, '/second');
+                },
+                child: Container(
+                  height: 190.0,
+                  width: 130.0,
+                  child: Card(
+
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Image.asset(
+                          'images/carrot.png',
+                          height: 80.0,
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Text(
+                          'Carrot',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Text('15 farmers'),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -158,6 +167,7 @@ class _VegetableList extends State<VegetablesList> {
                 ),
               ),
               Container(
+
                 height: 190.0,
                 width: 130.0,
                 child: Card(
