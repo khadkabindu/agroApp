@@ -143,10 +143,7 @@ class _ProductView extends State<ProductView> {
                                                     backgroundColor: Colors.white,
                                                     title: Text('Set the Quantity'),
                                                     content: CounterDesign(),
-
-
                                                   ),
-
                                                 );
                                               },
                                               child: Text(

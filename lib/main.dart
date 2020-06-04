@@ -2,6 +2,7 @@ import 'package:flappy_search_bar/flappy_search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_place_picker/google_maps_place_picker.dart';
+import 'package:localagriculture/farmer_profile_view.dart';
 import 'package:localagriculture/productView.dart';
 import 'package:localagriculture/searchBar.dart';
 import 'package:localagriculture/sellersList.dart';
@@ -13,6 +14,7 @@ void main() {
     routes: {
       '/': (context) => MyApp(),
       '/second': (context) => ProductView(),
+      '/third': (context) => FarmersView(),
     },
   ));
 }
@@ -50,7 +52,7 @@ class _MyAppState extends State<MyApp> {
                         child: Row(
                           children: <Widget>[
                             SizedBox(
-                              height: 100.0,
+                              height: 20.0,
                             ),
                             IconButton(
                               icon: Icon(

@@ -57,11 +57,11 @@ class _CounterDesign extends State<CounterDesign> {
           SizedBox(height: 20.0,),
           Container(
             child: Text(
-              ' Price Rs $_amt           ',
+              ' Price Rs $_amt                         ',
 
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 30.0,
+                fontSize: 20.0,
               ),
 
             ),
@@ -71,13 +71,23 @@ class _CounterDesign extends State<CounterDesign> {
             child: Row(
               children: <Widget>[
                 SizedBox(width: 70.0,),
-                Text('Cancel',style: TextStyle(color: Colors.green),),
+                GestureDetector(onTap: (){
+                  Navigator.pop(context);
+                },child: Text('Cancel',style: TextStyle(color: Colors.green),)),
                 SizedBox(width: 20.0,),
-                RaisedButton(
-
-                  onPressed: (){},
-                  child: Text('Purchase,',style: TextStyle(color: Colors.white),),
-                  color: Colors.green,
+                Builder(
+                  builder: (BuildContext context) =>
+                   RaisedButton(
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0),),
+                    onPressed: () {
+                      Scaffold.of(context).showSnackBar(SnackBar(
+                        content: Text('Show Snackbar'),
+                        duration: Duration(seconds: 3),
+                      ));
+                    },
+                    child: Text('Purchase',style: TextStyle(color: Colors.white),),
+                    color: Colors.green,
+                  ),
                 ),
 
 
