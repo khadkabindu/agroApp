@@ -135,6 +135,10 @@ class _MyAppState extends State<MyApp> {
                   title: Text('Sell'),
                 ),
                 BottomNavigationBarItem(
+                  icon: Icon(Icons.supervised_user_circle),
+                  title: Text('Connections'),
+                ),
+                BottomNavigationBarItem(
                   icon: Icon(Icons.person),
                   title: Text('Profile'),
                 ),

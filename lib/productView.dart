@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:localagriculture/counter_design.dart';
 
 class ProductView extends StatefulWidget {
   @override
@@ -11,6 +12,15 @@ class _ProductView extends State<ProductView> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          elevation: 0.0,
+          backgroundColor: Colors.green[100],
+          leading: IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pop(context);
+              }),
+        ),
         backgroundColor: Colors.green[100],
         body: ListView(
           children: <Widget>[
@@ -48,14 +58,18 @@ class _ProductView extends State<ProductView> {
                   width: 500.0,
                   child: Column(
                     children: <Widget>[
-                      SizedBox(height: 20.0,),
+                      SizedBox(
+                        height: 20.0,
+                      ),
                       Text(
                         '5 farmers are selling carrot in your area',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 15.0),
                       ),
-                      SizedBox(height: 20.0,),
+                      SizedBox(
+                        height: 20.0,
+                      ),
                       Container(
                         height: 500,
                         child: ListView(
@@ -68,41 +82,81 @@ class _ProductView extends State<ProductView> {
                                   children: <Widget>[
                                     CircleAvatar(
                                       radius: 30,
-                                      backgroundImage: AssetImage('images/woman farmer.jpg'),
+                                      backgroundImage:
+                                          AssetImage('images/woman farmer.jpg'),
                                     ),
                                     SizedBox(
                                       width: 10.0,
                                     ),
                                     Container(
-
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: <Widget>[
                                           Row(
                                             children: <Widget>[
-                                              Text('Reema Basnet',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20.0),),
-
+                                              Text(
+                                                'Reema Basnet',
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 20.0),
+                                              ),
                                             ],
                                           ),
                                           Row(
                                             children: <Widget>[
-                                              Icon(Icons.star,color: Colors.green,size: 18,),
+                                              Icon(
+                                                Icons.star,
+                                                color: Colors.green,
+                                                size: 18,
+                                              ),
                                               Text('5.0 - ships 5 tons'),
-
                                             ],
                                           ),
                                         ],
                                       ),
                                     ),
-                                    SizedBox(width: 100.0,),
-                                    Container(child:Column(
-                                      children: <Widget>[
-                                        GestureDetector(
-                                            onTap:(){},child: Text('Connect',style: TextStyle(color: Colors.green),)),
-                                        SizedBox(height: 5.0,),
-                                        GestureDetector(onTap:(){},child: Text('Buy now',style: TextStyle(color: Colors.green),)),
-                                      ],
-                                    ) ,),
+                                    SizedBox(
+                                      width: 100.0,
+                                    ),
+                                    Container(
+                                      child: Column(
+                                        children: <Widget>[
+                                          GestureDetector(
+                                              onTap: () {},
+                                              child: Text(
+                                                'Connect',
+                                                style: TextStyle(
+                                                    color: Colors.green),
+                                              )),
+                                          SizedBox(
+                                            height: 5.0,
+                                          ),
+                                          GestureDetector(
+                                              onTap: () {
+                                                showDialog(context: context,
+                                                  builder: (_) =>  AlertDialog(
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius: BorderRadius.all(Radius.circular(20.0),),
+                                                    ),
+                                                    elevation: 20.0,
+                                                    backgroundColor: Colors.white,
+                                                    title: Text('Set the Quantity'),
+                                                    content: CounterDesign(),
+
+
+                                                  ),
+
+                                                );
+                                              },
+                                              child: Text(
+                                                'Buy now',
+                                                style: TextStyle(
+                                                    color: Colors.green),
+                                              )),
+                                        ],
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
@@ -115,41 +169,66 @@ class _ProductView extends State<ProductView> {
                                   children: <Widget>[
                                     CircleAvatar(
                                       radius: 30,
-                                      backgroundImage: AssetImage('images/farmer 1.jpg'),
+                                      backgroundImage:
+                                          AssetImage('images/farmer 1.jpg'),
                                     ),
                                     SizedBox(
                                       width: 10.0,
                                     ),
                                     Container(
-
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: <Widget>[
                                           Row(
                                             children: <Widget>[
-                                              Text('Anil Shrestha',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20.0),),
-
+                                              Text(
+                                                'Anil Shrestha',
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 20.0),
+                                              ),
                                             ],
                                           ),
                                           Row(
                                             children: <Widget>[
-                                              Icon(Icons.star,color: Colors.green,size: 18,),
+                                              Icon(
+                                                Icons.star,
+                                                color: Colors.green,
+                                                size: 18,
+                                              ),
                                               Text('5.0 - ships 6 tons'),
-
                                             ],
                                           ),
                                         ],
                                       ),
                                     ),
-                                    SizedBox(width: 100.0,),
-                                    Container(child:Column(
-                                      children: <Widget>[
-                                        GestureDetector(
-                                            onTap:(){},child: Text('Connect',style: TextStyle(color: Colors.green),)),
-                                        SizedBox(height: 5.0,),
-                                        GestureDetector(onTap:(){},child: Text('Buy now',style: TextStyle(color: Colors.green),)),
-                                      ],
-                                    ) ,),
+                                    SizedBox(
+                                      width: 100.0,
+                                    ),
+                                    Container(
+                                      child: Column(
+                                        children: <Widget>[
+                                          GestureDetector(
+                                              onTap: () {},
+                                              child: Text(
+                                                'Connect',
+                                                style: TextStyle(
+                                                    color: Colors.green),
+                                              )),
+                                          SizedBox(
+                                            height: 5.0,
+                                          ),
+                                          GestureDetector(
+                                              onTap: () {},
+                                              child: Text(
+                                                'Buy now',
+                                                style: TextStyle(
+                                                    color: Colors.green),
+                                              )),
+                                        ],
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
@@ -162,41 +241,66 @@ class _ProductView extends State<ProductView> {
                                   children: <Widget>[
                                     CircleAvatar(
                                       radius: 30,
-                                      backgroundImage: AssetImage('images/manju.jpg'),
+                                      backgroundImage:
+                                          AssetImage('images/manju.jpg'),
                                     ),
                                     SizedBox(
                                       width: 10.0,
                                     ),
                                     Container(
-
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: <Widget>[
                                           Row(
                                             children: <Widget>[
-                                              Text('Manju Rimal',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20.0),),
-
+                                              Text(
+                                                'Manju Rimal',
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 20.0),
+                                              ),
                                             ],
                                           ),
                                           Row(
                                             children: <Widget>[
-                                              Icon(Icons.star,color: Colors.green,size: 18,),
+                                              Icon(
+                                                Icons.star,
+                                                color: Colors.green,
+                                                size: 18,
+                                              ),
                                               Text('4.0 - ships 6 tons'),
-
                                             ],
                                           ),
                                         ],
                                       ),
                                     ),
-                                    SizedBox(width: 100.0,),
-                                    Container(child:Column(
-                                      children: <Widget>[
-                                        GestureDetector(
-                                            onTap:(){},child: Text('Connect',style: TextStyle(color: Colors.green),)),
-                                        SizedBox(height: 5.0,),
-                                        GestureDetector(onTap:(){},child: Text('Buy now',style: TextStyle(color: Colors.green),)),
-                                      ],
-                                    ) ,),
+                                    SizedBox(
+                                      width: 100.0,
+                                    ),
+                                    Container(
+                                      child: Column(
+                                        children: <Widget>[
+                                          GestureDetector(
+                                              onTap: () {},
+                                              child: Text(
+                                                'Connect',
+                                                style: TextStyle(
+                                                    color: Colors.green),
+                                              )),
+                                          SizedBox(
+                                            height: 5.0,
+                                          ),
+                                          GestureDetector(
+                                              onTap: () {},
+                                              child: Text(
+                                                'Buy now',
+                                                style: TextStyle(
+                                                    color: Colors.green),
+                                              )),
+                                        ],
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
@@ -209,41 +313,66 @@ class _ProductView extends State<ProductView> {
                                   children: <Widget>[
                                     CircleAvatar(
                                       radius: 30,
-                                      backgroundImage: AssetImage('images/Smiley.jpg'),
+                                      backgroundImage:
+                                          AssetImage('images/Smiley.jpg'),
                                     ),
                                     SizedBox(
                                       width: 10.0,
                                     ),
                                     Container(
-
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: <Widget>[
                                           Row(
                                             children: <Widget>[
-                                              Text('Shikha Raut',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20.0),),
-
+                                              Text(
+                                                'Shikha Raut',
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 20.0),
+                                              ),
                                             ],
                                           ),
                                           Row(
                                             children: <Widget>[
-                                              Icon(Icons.star,color: Colors.green,size: 18,),
+                                              Icon(
+                                                Icons.star,
+                                                color: Colors.green,
+                                                size: 18,
+                                              ),
                                               Text('4.0 - ships 6 tons'),
-
                                             ],
                                           ),
                                         ],
                                       ),
                                     ),
-                                    SizedBox(width: 100.0,),
-                                    Container(child:Column(
-                                      children: <Widget>[
-                                        GestureDetector(
-                                            onTap:(){},child: Text('Connect',style: TextStyle(color: Colors.green),)),
-                                        SizedBox(height: 5.0,),
-                                        GestureDetector(onTap:(){},child: Text('Buy now',style: TextStyle(color: Colors.green),)),
-                                      ],
-                                    ) ,),
+                                    SizedBox(
+                                      width: 100.0,
+                                    ),
+                                    Container(
+                                      child: Column(
+                                        children: <Widget>[
+                                          GestureDetector(
+                                              onTap: () {},
+                                              child: Text(
+                                                'Connect',
+                                                style: TextStyle(
+                                                    color: Colors.green),
+                                              )),
+                                          SizedBox(
+                                            height: 5.0,
+                                          ),
+                                          GestureDetector(
+                                              onTap: () {},
+                                              child: Text(
+                                                'Buy now',
+                                                style: TextStyle(
+                                                    color: Colors.green),
+                                              )),
+                                        ],
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
@@ -256,41 +385,66 @@ class _ProductView extends State<ProductView> {
                                   children: <Widget>[
                                     CircleAvatar(
                                       radius: 30,
-                                      backgroundImage: AssetImage('images/farmer 1.jpg'),
+                                      backgroundImage:
+                                          AssetImage('images/farmer 1.jpg'),
                                     ),
                                     SizedBox(
                                       width: 10.0,
                                     ),
                                     Container(
-
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: <Widget>[
                                           Row(
                                             children: <Widget>[
-                                              Text('Hari Tamang',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20.0),),
-
+                                              Text(
+                                                'Hari Tamang',
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 20.0),
+                                              ),
                                             ],
                                           ),
                                           Row(
                                             children: <Widget>[
-                                              Icon(Icons.star,color: Colors.green,size: 18,),
+                                              Icon(
+                                                Icons.star,
+                                                color: Colors.green,
+                                                size: 18,
+                                              ),
                                               Text('3.0 - ships 6 tons'),
-
                                             ],
                                           ),
                                         ],
                                       ),
                                     ),
-                                    SizedBox(width: 100.0,),
-                                    Container(child:Column(
-                                      children: <Widget>[
-                                        GestureDetector(
-                                            onTap:(){},child: Text('Connect',style: TextStyle(color: Colors.green),)),
-                                        SizedBox(height: 5.0,),
-                                        GestureDetector(onTap:(){},child: Text('Buy now',style: TextStyle(color: Colors.green),)),
-                                      ],
-                                    ) ,),
+                                    SizedBox(
+                                      width: 100.0,
+                                    ),
+                                    Container(
+                                      child: Column(
+                                        children: <Widget>[
+                                          GestureDetector(
+                                              onTap: () {},
+                                              child: Text(
+                                                'Connect',
+                                                style: TextStyle(
+                                                    color: Colors.green),
+                                              )),
+                                          SizedBox(
+                                            height: 5.0,
+                                          ),
+                                          GestureDetector(
+                                              onTap: () {},
+                                              child: Text(
+                                                'Buy now',
+                                                style: TextStyle(
+                                                    color: Colors.green),
+                                              )),
+                                        ],
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
