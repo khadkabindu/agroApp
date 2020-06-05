@@ -68,7 +68,7 @@ class _FarmersView extends State<FarmersView> {
                             ),
                             SizedBox(height: 30.0,),
                             Text('Ahout her journey, firm and inspiration',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15.0),),
-                            SizedBox(height: 30.0,),
+                            SizedBox(height: 10.0,),
                             Padding(
                               padding: EdgeInsets.all(15.0),
                               child: Column(
@@ -83,7 +83,7 @@ class _FarmersView extends State<FarmersView> {
                                       ' It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more '
                                       'recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',textAlign: TextAlign.center,),
 
-                                  SizedBox(height: 180.0,),
+                                  SizedBox(height: 190.0,),
                                   ButtonTheme(
                                     minWidth: 500.0,
                                     height: 60,
