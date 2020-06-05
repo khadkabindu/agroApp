@@ -36,7 +36,7 @@ class _Connections extends State<Connections> {
           padding: EdgeInsets.all(16.0),
           child: ListView.separated(
               scrollDirection: Axis.vertical,
-              itemCount: 10,
+              itemCount: 15,
               separatorBuilder: (context, index) => Divider(
                     height: 1,
                     color: Colors.grey,

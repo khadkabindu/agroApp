@@ -12,12 +12,6 @@ class _HomePageState extends State<HomePage> {
 
   static final kInitialPosition = LatLng(-33.8567844, 151.213108);
 
-//  void _onItemTapped(int index) {
-//    setState(() {
-//      _selectedIndex = index;
-//    });
-//  }
-
   @override
   Widget build(BuildContext context) {
     return
@@ -84,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                             height: 30.0,
                           ),
                           Text(
-                            'Available Today',
+                            'Available Now',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20.0),
                           ),

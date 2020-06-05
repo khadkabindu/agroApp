@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_place_picker/google_maps_place_picker.dart';
 import 'package:localagriculture/HomePage.dart';
+import 'package:localagriculture/Profile.dart';
 import 'package:localagriculture/Sell.dart';
 import 'package:localagriculture/connections.dart';
 import 'package:localagriculture/farmer_profile_view.dart';
@@ -33,6 +34,7 @@ class _DefaultState extends State<Default> {
     HomePage(),
     Sell(),
     Connections(),
+    Profile(),
   ];
 
 
