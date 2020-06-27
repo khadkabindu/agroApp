@@ -85,12 +85,10 @@ class _CounterDesign extends State<CounterDesign> {
                         duration: Duration(seconds: 3),
                       ));
                     },
-                    child: Text('Purchase',style: TextStyle(color: Colors.white),),
+                    child: GestureDetector(child: Text('Purchase',style: TextStyle(color: Colors.white),)),
                     color: Colors.green,
                   ),
                 ),
-
-
               ],
             ),
           ),

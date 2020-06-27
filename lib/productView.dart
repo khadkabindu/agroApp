@@ -117,7 +117,7 @@ class _ProductView extends State<ProductView> {
                                       ),
                                     ),
                                     SizedBox(
-                                      width: 100.0,
+                                      width: 60.0,
                                     ),
                                     Container(
                                       child: Column(
@@ -201,7 +201,7 @@ class _ProductView extends State<ProductView> {
                                       ),
                                     ),
                                     SizedBox(
-                                      width: 100.0,
+                                      width: 70.0,
                                     ),
                                     Container(
                                       child: Column(
@@ -273,7 +273,7 @@ class _ProductView extends State<ProductView> {
                                       ),
                                     ),
                                     SizedBox(
-                                      width: 100.0,
+                                      width: 70.0,
                                     ),
                                     Container(
                                       child: Column(
@@ -345,7 +345,7 @@ class _ProductView extends State<ProductView> {
                                       ),
                                     ),
                                     SizedBox(
-                                      width: 100.0,
+                                      width: 70.0,
                                     ),
                                     Container(
                                       child: Column(
@@ -417,7 +417,7 @@ class _ProductView extends State<ProductView> {
                                       ),
                                     ),
                                     SizedBox(
-                                      width: 100.0,
+                                      width: 70.0,
                                     ),
                                     Container(
                                       child: Column(

@@ -83,7 +83,7 @@ class _FarmersView extends State<FarmersView> {
                                       ' It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more '
                                       'recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',textAlign: TextAlign.center,),
 
-                                  SizedBox(height: 190.0,),
+                                  SizedBox(height: 120.0,),
                                   ButtonTheme(
                                     minWidth: 500.0,
                                     height: 60,

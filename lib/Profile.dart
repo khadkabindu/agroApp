@@ -20,6 +20,13 @@ class _FarmersView extends State<Profile> {
               onPressed: () {
                 Navigator.pop(context);
               }),
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.edit),
+                onPressed: () {
+                  Navigator.pop(context);
+                }),
+          ],
         ),
         body: ListView(
           children: <Widget>[
